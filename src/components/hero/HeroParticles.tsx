@@ -14,7 +14,7 @@ const HeroParticles = () => {
   }, [theme]);
 
   return (
-    <div className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+    <div className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
       <Particles
         className="absolute inset-0"
         quantity={100}

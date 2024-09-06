@@ -3,7 +3,48 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-gradient-to-b from-amber-50 to-red-100 dark:from-red-500 dark:to-amber-500;
+  :root {
+    --background: 28 61% 86%;
+    --foreground: 36 33% 3%;
+    --card: 28 61% 86%;
+    --card-foreground: 36 33% 3%;
+    --popover: 28 61% 86%;
+    --popover-foreground: 36 33% 3%;
+    --primary: 25 96% 53%;
+    --primary-foreground: 36 33% 3%;
+    --secondary: 26 80% 72%;
+    --secondary-foreground: 36 33% 3%;
+    --muted: 28 61% 20%;
+    --muted-foreground: 36 33% 70%;
+    --accent: 26 97% 64%;
+    --accent-foreground: 36 33% 3%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 36 33% 3%;
+    --border: 28 61% 20%;
+    --input: 28 61% 20%;
+    --ring: 26 97% 40%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 28 61% 14%;
+    --foreground: 36 33% 97%;
+    --card: 28 61% 14%;
+    --card-foreground: 36 33% 97%;
+    --popover: 28 61% 14%;
+    --popover-foreground: 36 33% 97%;
+    --primary: 25 96% 47%;
+    --primary-foreground: 28 61% 14%;
+    --secondary: 26 80% 28%;
+    --secondary-foreground: 36 33% 97%;
+    --muted: 28 61% 80%;
+    --muted-foreground: 36 33% 97%;
+    --accent: 26 97% 36%;
+    --accent-foreground: 36 33% 97%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 35 33% 10%;
+    --border: 28 61% 60%;
+    --input: 28 61% 80%;
+    --ring: 26 97% 60%;
   }
 }

@@ -21,13 +21,13 @@ const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
         } as CSSProperties
       }
       className={cn(
-        "mx-auto max-w-md text-amber-300/70 dark:text-amber-300/70",
+        "mx-auto max-w-md text-amber-800/70 dark:text-neutral-400/70 border-2 border-red-600/70 rounded-3xl",
 
         // Shimmer effect
         "animate-shimmer bg-clip-text bg-no-repeat [background-position:0_0] [background-size:var(--shimmer-width)_100%] [transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite]",
 
         // Shimmer gradient
-        "bg-gradient-to-r from-transparent via-black/80 via-50% to-transparent  dark:via-white/80 border rounded-3xl border-gray-300",
+        "bg-gradient-to-r from-amber-300/70 via-red-400/80 via-50% to-red-300/70  dark:via-white/80",
 
         className
       )}

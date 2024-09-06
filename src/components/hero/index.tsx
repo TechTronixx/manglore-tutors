@@ -1,9 +1,7 @@
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
 import HeroParticles from "./HeroParticles";
 import SparklesText from "../magicui/sparkles-text";
-import AnimatedShinyText from "../magicui/animated-shiny-text";
 import { GraduationCap } from "lucide-react";
 import { CoolMode } from "../magicui/cool-mode";
 
@@ -15,17 +13,22 @@ function HeroSection() {
     <div className="min-h-screen relative flex items-center justify-center">
       <div className="absolute inset-0 z-10 flex flex-col justify-center items-center p-4 text-center">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
           className="w-full max-w-4xl"
         >
           <SparklesText
-            text="Manglore Tutors!"
-            className="text-amber-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+            text="Lorem Ipsum"
+            className="text-primary text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"
           />
         </motion.div>
-        <motion.div className="text-sm sm:text-base md:text-lg text-amber-200 mt-4 max-w-2xl">
+        <motion.div
+          className="text-md sm:text-base md:text-2xl font-semibold text-amber-400 mt-4 max-w-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+        >
           {words.map((word, index) => (
             <motion.span
               key={index}
@@ -43,33 +46,35 @@ function HeroSection() {
           ))}
         </motion.div>
         <motion.button
-          className="mt-6 sm:mt-8 cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          className="mt-8 cursor-pointer group"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
-          <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-2 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-            <span className="text-sm sm:text-base font-medium">
-              ✨ Find your Tutor!
-            </span>
-            <GraduationCap
-              color="#ffd478"
-              className="ml-1 w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
-            />
-          </AnimatedShinyText>
+          <div className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-full transition-all duration-300 ease-in-out hover:bg-primary/80">
+            <span className="text-base font-medium mr-2">Find your Tutor!</span>
+            <GraduationCap className="w-5 h-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
+          </div>
         </motion.button>
-        <div className="pt-4 py-2">
+        <motion.div
+          className="mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
+        >
           <CoolMode
             options={{
               particle:
                 "https://www.pngfind.com/pngs/m/294-2949251_burger-emoji-png-hamburger-emoji-transparent-png.png",
             }}
           >
-            <button className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 flex items-center">
-              Click Me!
+            <button className="bg-secondary hover:bg-secondary/80 text-secondary-foreground px-6 py-3 rounded-full text-base font-medium transition-colors duration-300 flex items-center">
+              Learn More
             </button>
           </CoolMode>
-        </div>
+        </motion.div>
       </div>
       <HeroParticles />
     </div>
